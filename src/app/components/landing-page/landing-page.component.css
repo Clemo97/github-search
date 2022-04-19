@@ -1,0 +1,61 @@
+.jumbotron {
+  margin-bottom: 2%;
+  background-color: rgb(0, 0, 0, 0.9);
+  color: lightcyan;
+  padding: 2%;
+}
+
+input {
+  background-color: lightcyan;
+}
+
+.border-r {
+  border-right: 1px solid gray;
+}
+
+.border-b {
+  border-bottom: 1px solid gray;
+  margin-bottom: 1em;
+}
+
+hr {
+  border-color: lightgray;
+}
+
+.username {
+  font-size: x-large;
+  color: orange;
+}
+
+.orange {
+  color: orange;
+}
+
+img {
+  max-width: 60%;
+  object-fit: cover;
+  border-radius: 1em;
+  box-shadow: 3px 5px rgb(255, 165, 0, 0.3)
+}
+
+.text-style {
+  font-size: small;
+}
+
+.card {
+  background-color: black;
+  height: 100%;
+}
+
+.jumbotron a {
+  text-decoration: none;
+  color: rgb(255, 165, 0, 0.8);
+}
+
+.jumbotron a:hover {
+  color: cyan;
+}
+
+.text-normal {
+  font-size: 1.1em;
+}
