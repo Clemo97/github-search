@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Users } from 'src/app/class/User/users';
+import { UsernameInput } from 'src/app/class/UsernameInput/username-input';
+import { UserRepos } from 'src/app/class/UserRepos/user-repos';
 
 @Component({
   selector: 'app-user-search',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserSearchComponent implements OnInit {
 
-  constructor() { }
+  faSearch = faSearch;
 
-  ngOnInit(): void {
+  searchedUser = new UsernameInput();
+  searchedUser1 = new UsernameInput();
+  user: Users = new Users();
+  userRepos: UserRepos = new UserRepos();
+
+  submitUsername() {
+    this.searchedUser1 = this.searchedUser;
+    this.userService.searchUser(this.searchedUser1.username);
+    this.user = this.userService.user;
+    this.userRepos = this.userService.userRepos;
+    this.searchedUser = new UsernameInput();
   }
 
+  constructor(private userService: SearchUserService) { }
+
+  ngOnInit() {
+
+  }
 }
