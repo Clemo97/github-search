@@ -9,6 +9,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { RepoSearchComponent } from './components/repo-search/repo-search.component';
 import { UserSearchComponent } from './components/user-search/user-search.component';
 import { RepoHighlightDirective } from './directives/RepoHighlight/repo-highlight.directive';
+import { DatePipePipe } from './pipes/date-pipe/date-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RepoHighlightDirective } from './directives/RepoHighlight/repo-highligh
     NotFoundComponent,
     RepoSearchComponent,
     UserSearchComponent,
-    RepoHighlightDirective
+    RepoHighlightDirective,
+    DatePipePipe
   ],
   imports: [
     BrowserModule,
