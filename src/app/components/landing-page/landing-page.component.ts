@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Users } from 'src/app/class/User/users';
+import { UserRepos } from 'src/app/class/UserRepos/user-repos';
 
 @Component({
   selector: 'app-landing-page',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor() { }
+  user: Users = new Users();
+  userRepos: UserRepos = new UserRepos();
 
-  ngOnInit(): void {
+  constructor(private userService: SearchUserService) { }
+
+  ngOnInit() {
+    this.userService.searchUser("Collin9726");
+    this.user = this.userService.user;
+    this.userRepos = this.userService.userRepos;
   }
-
 }
