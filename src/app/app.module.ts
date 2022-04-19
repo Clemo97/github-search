@@ -8,6 +8,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { RepoSearchComponent } from './components/repo-search/repo-search.component';
 import { UserSearchComponent } from './components/user-search/user-search.component';
+import { RepoHighlightDirective } from './directives/RepoHighlight/repo-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { UserSearchComponent } from './components/user-search/user-search.compon
     LandingPageComponent,
     NotFoundComponent,
     RepoSearchComponent,
-    UserSearchComponent
+    UserSearchComponent,
+    RepoHighlightDirective
   ],
   imports: [
     BrowserModule,
