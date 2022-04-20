@@ -1,0 +1,39 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+*{
+    margin: 0%;
+   
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.search{
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+    border-radius: 20px;
+    font: 12px;
+
+}
+.search input{
+    margin-top: 20px;
+    width: 100%;
+    padding: 8px 16px;
+    border-color: green;
+    border-width: 2px;
+}
+.profile{
+    margin-left: 13%;
+    border-color: darkgreen;
+}
+li{
+    opacity: o.8;
+    color: rgb(10, 10, 10);
+    background-color: cornsilk;
+   
+}
+.top{
+    opacity: o.8;
+    background-color: cornsilk;
+    border-radius: 3%;
+    color: darkblue;
+}

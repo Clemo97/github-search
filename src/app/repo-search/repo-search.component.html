@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-dark primary-color">
+    <a class="navbar-brand" href="#">gitHub</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+     </div>
+  </nav>
+  <div class="search">
+    <h4>Enter your repository name</h4>
+    <input type="text" placeholder="search"  [(ngModel)]='repoName' (keyup)="findRepo()">
+  </div> 
+  <div class="container">
+    <div *ngIf="repoitems">
+      <div class="card mt-4 profile" *ngFor='let item of repoitems'>
+        <div class="card-header">     
+        </div>
+        <div class="card-body" appHighlight>
+            <div class="row mt-2">
+              
+              <div class="col-md-12">
+                <div class="card ml-2 mr-2">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Name:</strong>{{item.name}}</li>
+                    <li class="list-group-item"><strong>Owner:</strong> {{item.owner.login}}</li>
+                  
+                    <li class="list-group-item"><strong>Description:</strong> {{item.description}}</li>
+                    <li class="list-group-item"><strong>Languages:</strong>  {{item.language}}</li>
+                    <li class="list-group-item"><strong>Created:</strong> {{item.created_at|datecount}}</li>
+                  </ul>
+                </div>
+              </div>     
+        </div>
+      </div>
+    </div>
