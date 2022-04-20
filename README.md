@@ -1,6 +1,8 @@
 # Github-search :black_heart:
 
-This is an Angular web app which consumes Github API to enable one see github user with all his or her repositories . The project was created using the Angular CLI version 13
+This is an Angular web app which consumes Github API to enable one to search for a github user with all his or her repositories . The project was created using the Angular CLI version 13
+![Alt text](src/assets/homepage.png?raw=true "Optional Title")
+
 
 
 ## Cloning the project
