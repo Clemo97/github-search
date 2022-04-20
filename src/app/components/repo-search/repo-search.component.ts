@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Repo } from 'src/app/class/Repo/repo';
 import { RepoNameInput } from 'src/app/class/RepoNameInput/repo-name-input';
-import { ReposTotalCount } from 'src/app/class/ReposTotalCount/repos-total-count';
+import { Repo } from 'src/app/class/Repo/repo';
+import { ReposTotalCount } from '../../class/ReposTotalCount/repos-total-count';
+import { SearchRepoService } from 'src/app/services/SearchRepo/search-repo.service';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-repo-search',
@@ -9,6 +11,7 @@ import { ReposTotalCount } from 'src/app/class/ReposTotalCount/repos-total-count
   styleUrls: ['./repo-search.component.css']
 })
 export class RepoSearchComponent implements OnInit {
+
   faSearch = faSearch;
 
   searchedRepo = new RepoNameInput();
@@ -30,6 +33,5 @@ export class RepoSearchComponent implements OnInit {
 
   ngOnInit() {
   }
-
 
 }

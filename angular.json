@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "github-search": {
+    "gitsearch": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/github-search",
+            "outputPath": "dist/gitsearch",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -29,7 +29,11 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/tether/dist/js/tether.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -68,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "github-search:build:production"
+              "browserTarget": "gitsearch:build:production"
             },
             "development": {
-              "browserTarget": "github-search:build:development"
+              "browserTarget": "gitsearch:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "github-search:build"
+            "browserTarget": "gitsearch:build"
           }
         },
         "test": {
@@ -102,5 +106,5 @@
       }
     }
   },
-  "defaultProject": "github-search"
+  "defaultProject": "gitsearch"
 }

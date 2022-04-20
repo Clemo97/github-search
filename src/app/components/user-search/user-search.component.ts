@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Users } from 'src/app/class/User/users';
 import { UsernameInput } from 'src/app/class/UsernameInput/username-input';
+import { Users } from 'src/app/class/User/users';
+import { SearchUserService } from 'src/app/services/SearchUser/search-user.service';
 import { UserRepos } from 'src/app/class/UserRepos/user-repos';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-user-search',
@@ -30,4 +32,5 @@ export class UserSearchComponent implements OnInit {
   ngOnInit() {
 
   }
+
 }

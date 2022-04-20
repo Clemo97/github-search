@@ -1,40 +1,35 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GitLibComponent } from './components/git-lib/git-lib.component';
-import { UserSearchComponent } from './components/user-search/user-search.component';
-import { RepoSearchComponent } from './components/repo-search/repo-search.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { BodyComponent } from './body/body.component';
+import { FooterComponent } from './footer/footer.component';
+import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { DatePipePipe } from './pipes/date-pipe/date-pipe.pipe';
-import { RepoHighlightDirective } from './directives/RepoHighlight/repo-highlight.directive';
-import { NotFoundComponent } from './components/not-found/not-found.component';
-import { LandingPageComponent } from './components/landing-page/landing-page.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { NgProgressModule } from '@ngx-progressbar/core';
-import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+import { DatecountPipe } from './datecount.pipe';
+import { RepoSearchComponent } from './repo-search/repo-search.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+
 
 @NgModule({
   declarations: [
+    DatecountPipe,
     AppComponent,
-    GitLibComponent,
-    UserSearchComponent,
+    NavbarComponent,
+    BodyComponent,
+    FooterComponent,
     RepoSearchComponent,
-    DatePipePipe,
-    RepoHighlightDirective,
     NotFoundComponent,
-    LandingPageComponent
+    
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
-    FontAwesomeModule,
-    NgProgressModule.forRoot(),
-    NgProgressHttpClientModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
